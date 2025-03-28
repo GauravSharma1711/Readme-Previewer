@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+   height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(169, 155, 155);
+}
+.nav{
+    background-color: rgb(88, 74, 74);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 720px;
+}
+.name{
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+}
+#resetBtn button{
+  
+    height: 28px;
+    width: 64px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.main .left{
+    height: 90vh;
+    width: 45vw;
+    border: 2px solid black;
+    margin: 8px;
+    background-color: rgb(231, 218, 218);
+    color: black;
+    font-size: 24px;
+    border-radius: 8px;
+}
+.main .right{
+    height: 90vh;
+    width: 45vw;
+    border: 2px solid black;
+    margin: 8px;
+    background-color: rgb(231, 218, 218);
+color: black;
+font-size: 24px;
+border-radius: 8px;
+}
+
+.main .left textarea {
+    width: 100%;
+    height: 100%;
+    border: none; 
+    outline: none;
+    background: transparent; 
+    font-size: 24px;
+    padding: 8px; 
+    resize: none; 
+    border-radius: 8px;
+}
+
+
+/* -------- */
+
+.main .right {
+    padding: 16px;
+    overflow-y: auto; /* Allows scrolling for long content */
+}
+
+/* Style markdown output */
+.right h1 {
+    font-size: 28px;
+    color: darkblue;
+}
+
+.right p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.right pre {
+    background: #282c34;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+
+
+/* -------------------------------------- */
+
+
+@media screen and (max-width: 1200px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .name {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #resetBtn button {
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+        margin-right: 8px;
+    }
+
+    .main {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .main .left, .main .right {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    .main .left textarea {
+        font-size: 16px;
+    }
+
+    .right h1 {
+        font-size: 24px;
+    }
+
+    .right p {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/* 🔹 Small Screens (Below 480px) */
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 20px;
+       
+    }
+    .nav{
+        height: 80px;
+    }
+   #resetBtn button{
+        height: 20px;
+    }
+
+
+    .main .left, .main .right {
+       width: 90vw;
+       
+    }
+
+    .right h1 {
+        font-size: 22px;
+    }
+
+    .right p {
+        font-size: 16px;
+    }
+
+    .main .left textarea {
+        font-size: 14px;
+    }
+}
